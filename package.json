@@ -7,10 +7,26 @@
   "description": "A simple Node app built on Express, instantly up and running.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack && node index.js",
+    "watch": "webpack --watch",
+    "build": "webpack --config webpack.config.js"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "express-fileupload": "1.1.5",
+    "firebase-admin": "^8.6.0",
+    "hbs": "^4.0.5",
+    "jimp": "^0.8.4",
+    "sendmail": "^1.6.1",
+    "serve-index": "^1.9.1",
+    "serve-static": "^1.14.1",
+    "socket.io": "^2.3.0",
+    "socket.io-p2p-server": "^1.2.0",
+    "web-push": "^3.4.0",
+    "whatwg-fetch": "3.0.0",
+    "@babel/polyfill": "^7.6.0",
+    "terser-webpack-plugin": "^2.1.2"
   },
   "engines": {
     "node": "8.x"
@@ -23,5 +39,13 @@
     "node",
     "glitch",
     "express"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "7.x",
+    "@babel/preset-env": "^7.5.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
+  }
 }
